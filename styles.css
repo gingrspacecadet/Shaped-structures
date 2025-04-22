@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between; /* 👈 pushes h1 left and nav right */
+    align-items: center;
+    margin: 20px;
+    padding-left: 20px;
+}
+
+header {
+    background-color: #e7e5e6;
+    padding: 20px;
+    height: 150px;
+}
+
+h1 {
+    color: #333;
+    text-align: left;
+    font-family:'Special Elite', 'Special Elite Fallback';
+    color:rgb(105, 105, 105);
+    padding-left: 10px;
+}
+
+header nav {
+    display: flex;
+    justify-content: right;
+}
+
+.nav-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: right;
+    /*width: 60px;*/
+    height: 60px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #979596;
+    font-weight: bold;
+    transition: background-color 0.2s, color 0.2s;
+    border: 2px solid transparent; /* Add border here for consistent sizing */
+    margin-left: 10px; /* optional spacing between buttons */
+    font-size: 15px;
+}
+
+.nav-a:hover {
+    border-color: #979596;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* Adjust based on how tall you want it */
+    overflow: hidden;
+}
+  
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+  
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+}
+  
+.carousel-item.active {
+    opacity: 1;
+    z-index: 1;
+}
+  
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0);
+    color: rgb(105, 105, 105);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s, background 0.3s;
+}
+  
+.carousel-btn:hover {
+    color: rgb(255, 255, 255)
+}
+  
+.carousel-inner:hover .carousel-btn {
+    opacity: 1;
+}
+  
+.carousel-btn.prev {
+    left: 20px;
+}
+  
+.carousel-btn.next {
+    right: 20px;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}  
+
+span {
+    display: flex;
+    justify-content: center;
+    font-size: 17.5px;
+    color: #333;
+    text-align: center;
+    color:rgb(105, 105, 105);
+    padding-left: 10px;
+}
+
+footer p {
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+    padding: 20px;
+    background-color: #e7e5e6;
+    margin-top: 20px;
+}
